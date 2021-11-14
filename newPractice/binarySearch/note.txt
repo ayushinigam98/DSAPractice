@@ -1,0 +1,1 @@
+deal with the boundary case seperately, if required, like you did in peak finding

@@ -1,0 +1,41 @@
+   0 1 2 3 4
+   ----------
+0 |0 0 0 1 1
+1 |0 0 0 1 0
+2 |1 1 0 1 0
+3 |0 1 0 0 0 
+4 |0 1 0 1 0 
+
+
+if gij = 0
+there is no edge from i to j, 
+so if i's outdegree was 0 so far, it remains so.
+however since the indegree must be V-1, j cannot be the sink
+since there is not incoming edge i->j
+
+if gij = 1
+there is an edge i->j
+hence i is no universal sink
+however if the previous gik for k<j were 0, then none of the ks are universal sinks
+j could be one, so we try from Gjk k>j onwards.
+
+
+int s = 0;
+
+for(int k=0; k<V; k++)
+{
+	if(Gsk == 0)
+	{
+		
+	}
+	else
+	{
+		s = k;
+	}
+}
+
+
+// s is the only possible element that is a sink, but it might noe be so check
+// the conditions
+return isSink(s)?s:-1;
+
